@@ -10,7 +10,7 @@ def check_domain(domain):
         return False
 
 def main():
-    base_domain = "[0-9,a-z]"  # замените на ваш базовый домен (например, "example")
+    base_domain = [a-z0-9]  # замените на ваш базовый домен (например, "example")
     ccTLDs = ["me", "us", "ru", "de", "fr", "cn"]  # список всех ccTLDs
 
     for tld in ccTLDs:
