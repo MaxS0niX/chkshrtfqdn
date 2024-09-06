@@ -10,7 +10,13 @@ def check_domain(domain):
         return False
 
 def main():
-    SLDs = [a-z0-9]  # Доменное имя второго уровня из единственного символа
+    # Перебор символов от 'a' до 'z' и от '0' до '9'
+    characters = [chr(char) for char in range(ord('a'), ord('z') + 1)]
+    digits = [chr(digit) for digit in range(ord('0'), ord('9') + 1)]
+    
+    # Объединяем два списка
+    SLDs = characters + digits
+    #SLDs = [a-z0-9]  # Доменное имя второго уровня из единственного символа
     ccTLDs = ["me", "us", "ru", "de", "fr", "cn"]  # список всех ccTLDs
 
     for tld in ccTLDs:
