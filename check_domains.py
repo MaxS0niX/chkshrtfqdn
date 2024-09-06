@@ -10,11 +10,11 @@ def check_domain(domain):
         return False
 
 def main():
-    2LDs = [a-z0-9]  # первый сивол
+    SLDs = [a-z0-9]  # Доменное имя второго уровня из единственного символа
     ccTLDs = ["me", "us", "ru", "de", "fr", "cn"]  # список всех ccTLDs
 
     for tld in ccTLDs:
-		for sld in 2LDs:
+		for sld in SLDs:
 			fqdn = f"{sld}.{tld}"
 	        if check_domain(fqdn):
 	            print(f"Domain exists: {fqdn}")
