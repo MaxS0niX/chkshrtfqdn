@@ -14,12 +14,12 @@ def main():
     ccTLDs = ["me", "us", "ru", "de", "fr", "cn"]  # список всех ccTLDs
 
     for tld in ccTLDs:
-		for sld in SLDs:
-			fqdn = f"{sld}.{tld}"
-	        if check_domain(fqdn):
-	            print(f"Domain exists: {fqdn}")
-	        else:
-	            print(f"Domain does not exist: {fqdn}")
+      for sld in SLDs:
+        fqdn = f"{sld}.{tld}"
+        if check_domain(fqdn):
+          print(f"Domain exists: {fqdn}")
+        else:
+          print(f"Domain does not exist: {fqdn}")
 
 if __name__ == '__main__':
     main()
