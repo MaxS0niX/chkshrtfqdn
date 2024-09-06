@@ -20,5 +20,5 @@ def main():
         else:
             print(f"Domain does not exist: {fqdn}")
 
-if name == "main":
+if __name__ == '__main__':
     main()
