@@ -10,15 +10,16 @@ def check_domain(domain):
         return False
 
 def main():
-    base_domain = [a-z0-9]  # замените на ваш базовый домен (например, "example")
+    2LDs = [a-z0-9]  # первый сивол
     ccTLDs = ["me", "us", "ru", "de", "fr", "cn"]  # список всех ccTLDs
 
     for tld in ccTLDs:
-        fqdn = f"{base_domain}.{tld}"
-        if check_domain(fqdn):
-            print(f"Domain exists: {fqdn}")
-        else:
-            print(f"Domain does not exist: {fqdn}")
+		for sld in 2LDs:
+			fqdn = f"{sld}.{tld}"
+	        if check_domain(fqdn):
+	            print(f"Domain exists: {fqdn}")
+	        else:
+	            print(f"Domain does not exist: {fqdn}")
 
 if __name__ == '__main__':
     main()
